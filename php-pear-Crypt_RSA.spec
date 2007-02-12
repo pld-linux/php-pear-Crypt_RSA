@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - provides RSA-like encryption support
-Summary(pl):	%{_pearname} - dostarcza szyfrowania zbliøonego do RSA
+Summary(pl.UTF-8):   %{_pearname} - dostarcza szyfrowania zbli≈ºonego do RSA
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
 Release:	3
@@ -32,10 +32,10 @@ math calculations:
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Ten pakiet pozwala na uøycie silnej, zbliøonej do RSA kryptografii z
-uøyciem dwÛch kluczy o dowolnej d≥ugo∂ci. Wykorzystuje do tego jedno z
-poniøszych rozszerzeÒ PHP do obliczeÒ matematycznych
+%description -l pl.UTF-8
+Ten pakiet pozwala na u≈ºycie silnej, zbli≈ºonej do RSA kryptografii z
+u≈ºyciem dw√≥ch kluczy o dowolnej d≈Çugo≈õci. Wykorzystuje do tego jedno z
+poni≈ºszych rozszerze≈Ñ PHP do oblicze≈Ñ matematycznych
 - rozszerzenie PECL big_int w wersji co najmniej 1.0.3
 - rozszerzenie PHP GMP
 - rozszerzenie PHP BCMath
@@ -44,7 +44,7 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -53,7 +53,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep

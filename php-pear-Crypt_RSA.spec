@@ -7,13 +7,13 @@
 Summary:	%{_pearname} - provides RSA-like encryption support
 Summary(pl.UTF-8):	%{_pearname} - dostarcza szyfrowania zbliżonego do RSA
 Name:		php-pear-%{_pearname}
-Version:	1.0.0
-Release:	4
+Version:	1.2.1
+Release:	1
 Epoch:		0
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	222a018dc66509d8b56f444a1ea7874d
+# Source0-md5:	3b0aa3666ab41dd5ffbd2d903f96481a
 URL:		http://pear.php.net/package/Crypt_RSA/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11

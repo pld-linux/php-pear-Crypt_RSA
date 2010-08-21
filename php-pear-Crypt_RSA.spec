@@ -1,15 +1,13 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Crypt
 %define		_subclass	RSA
-%define		_status		stable
+%define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
-
 Summary:	%{_pearname} - provides RSA-like encryption support
 Summary(pl.UTF-8):	%{_pearname} - dostarcza szyfrowania zbliżonego do RSA
 Name:		php-pear-%{_pearname}
 Version:	1.2.1
 Release:	1
-Epoch:		0
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -19,6 +17,9 @@ BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
+Suggests:	php-bcmath
+Suggests:	php-gmp
+Suggests:	php-pecl-big_int
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,9 +47,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-Requires:	%{name} = %{epoch}:%{version}-%{release}
-AutoReq:	no
+Requires:	%{name} = %{version}-%{release}
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.

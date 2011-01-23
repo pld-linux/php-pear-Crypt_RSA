@@ -20,6 +20,7 @@ Requires:	php-pear
 Suggests:	php-bcmath
 Suggests:	php-gmp
 Suggests:	php-pecl-big_int
+Obsoletes:	php-pear-Crypt_RSA-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,20 +43,6 @@ poniższych rozszerzeń PHP do obliczeń matematycznych
 - rozszerzenie PHP BCMath
 
 Ta klasa ma w PEAR status: %{_status}.
-
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
@@ -80,7 +67,3 @@ fi
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/*

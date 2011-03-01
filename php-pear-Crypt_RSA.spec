@@ -7,7 +7,7 @@ Summary:	%{_pearname} - provides RSA-like encryption support
 Summary(pl.UTF-8):	%{_pearname} - dostarcza szyfrowania zbliżonego do RSA
 Name:		php-pear-%{_pearname}
 Version:	1.2.1
-Release:	2
+Release:	3
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz

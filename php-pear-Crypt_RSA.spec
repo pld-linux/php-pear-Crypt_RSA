@@ -1,8 +1,6 @@
-%include	/usr/lib/rpm/macros.php
-%define		_class		Crypt
-%define		_subclass	RSA
 %define		_status		beta
-%define		_pearname	%{_class}_%{_subclass}
+%define		_pearname	Crypt_RSA
+%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - provides RSA-like encryption support
 Summary(pl.UTF-8):	%{_pearname} - dostarcza szyfrowania zbliżonego do RSA
 Name:		php-pear-%{_pearname}
@@ -17,9 +15,9 @@ BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
-Suggests:	php-bcmath
-Suggests:	php-gmp
-Suggests:	php-pecl-big_int
+Suggests:	php(bcmath)
+Suggests:	php(big_int)
+Suggests:	php(gmp)
 Obsoletes:	php-pear-Crypt_RSA-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -65,5 +63,5 @@ fi
 %doc install.log optional-packages.txt
 %doc docs/%{_pearname}/{docs,examples}
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}
+%{php_pear_dir}/Crypt/*.php
+%{php_pear_dir}/Crypt/RSA

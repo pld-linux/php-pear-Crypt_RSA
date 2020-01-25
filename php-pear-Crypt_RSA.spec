@@ -1,6 +1,5 @@
 %define		_status		beta
 %define		_pearname	Crypt_RSA
-%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - provides RSA-like encryption support
 Summary(pl.UTF-8):	%{_pearname} - dostarcza szyfrowania zbliżonego do RSA
 Name:		php-pear-%{_pearname}
